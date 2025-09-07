@@ -139,3 +139,19 @@ Stay tuned for CI/CD automation scripts and pipeline templates!
 > 🚀 **Write Clean Code, Deliver with Confidence.**
 > Use SonarQube to build maintainable, high-quality software.
 
+---
+
+## SonarQube Scan Setup for Non-Maven Projects (Python, Node.js, etc.)
+
+1. **Download SonarScanner CLI** → `wget <sonar-scanner-url>`  
+2. **Install unzip** → `sudo yum install unzip -y`  
+3. **Unzip scanner** → `unzip sonar-scanner-*.zip`  
+4. **Move to /opt** → `sudo mv sonar-scanner-* /opt/sonar-scanner`  
+5. **Set environment variables** → `export PATH=$PATH:/opt/sonar-scanner/bin`  
+6. **Optionally set SONAR_SCANNER_HOME** → `export SONAR_SCANNER_HOME=/opt/sonar-scanner`  
+7. **Reload bash** → `source ~/.bashrc`  
+8. **Prepare project properties** → create `sonar-project.properties` in project root with project key, name, sources, host URL, and token  
+9. **Run scan** → `sonar-scanner`  
+
+> Works for Python, Node.js, C/C++, or any project SonarQube supports.
+
